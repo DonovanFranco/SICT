@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Elegir Fecha | SICT</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<!-- CONTENIDO -->
+<main class="container mt-5">
+
+  <h2 class="text-center mb-4">Elegir Fecha</h2>
+
+  <div class="row">
+
+    
+
+    <!-- CALENDARIO -->
+    <div class="col-md-6">
+      <div class="card p-3 shadow-sm">
+        <!-- IMAGEN -->
+      <center><img src="img/logo-fs.jpg" class="img-fluid mb-3" height="304" width="304" alt="Calendario"></center>
+        <h5>Fechas disponibles</h5>
+
+        <!-- INPUT FECHA (SOLO 2026) -->
+        <input type="date"
+               id="fecha"
+               class="form-control"
+               min="2026-01-27"
+               max="2026-05-22">
+      </div>
+    </div>
+
+    <!-- HORARIOS -->
+    <div class="col-md-6">
+      <div class="card p-3 shadow-sm">
+
+        <h5>Horarios disponibles</h5>
+
+        <!-- HORARIOS GENERADOS POR JS -->
+        <div id="horarios" class="mb-3"></div>
+
+        <!-- TEXTO FECHA + HORA -->
+        <div id="seleccion"
+             class="text-center fw-bold mb-3"
+             style="font-size:18px; color:#0B2A4A;">
+        </div>
+
+        <!-- BOTÓN CONTINUAR -->
+        <button id="btnContinuar"
+                class="btn btn-success w-100"
+                style="display:none;">
+          Continuar
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- CARGAR HEADER/FOOTER -->
+<script>
+fetch('includes/header.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('header').innerHTML = data);
+
+fetch('includes/footer.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+<!-- JS DEL SISTEMA -->
+<script src="js/calendario.js"></script>
+
+</body>
+</html>

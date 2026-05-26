@@ -1,0 +1,206 @@
+/* =====================================
+   LOGIN ESTILO PORTAL SICT
+===================================== */
+
+.login-page {
+  background-color: #f1f3f6;
+}
+
+/* =========================
+   VARIABLES DE COLOR ITP
+========================= */
+:root {
+  --azul-itp: #0b2a4a;
+  --gris-itp: #6c757d;
+  --fondo: #f4f6f9;
+  --blanco: #ffffff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+.main-header {
+  background-color: var(--azul-itp);
+  padding: 15px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .logo {
+  color: var(--blanco);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.main-header .nav-link {
+  color: var(--blanco);
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.main-header .nav-link:hover {
+  opacity: 0.8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+.main-footer {
+  background-color: #e9ecef;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+}
+
+.main-footer p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--azul-itp);
+}
+
+.main-footer small {
+  color: var(--gris-itp);
+}
+
+
+/* =====================================
+   LOGIN ESTILO PORTAL SICT (70% formal + 30% moderno)
+===================================== */
+
+.login-page {
+  background: linear-gradient(135deg, #f4f6f9 0%, #eef2f7 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Centrado perfecto */
+.login-page .welcome-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* Card */
+.login-page .welcome-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 55px 50px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(11, 42, 74, 0.12);
+  position: relative;
+  text-align: center;
+  animation: fadeInUp 0.6s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover elegante */
+.login-page .welcome-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 35px 70px rgba(11, 42, 74, 0.18);
+}
+
+/* Barra azul lateral */
+.login-page .welcome-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(180deg, #0b2a4a, #123e6b);
+  border-radius: 20px 0 0 20px;
+}
+
+/* Logo */
+.login-page .logo-sict {
+  max-width: 110px;
+  margin-bottom: 20px;
+}
+
+/* Título principal */
+.login-page .welcome-card h1 {
+  color: var(--azul-itp);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Texto secundario */
+.login-page .welcome-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+/* Subtítulo */
+.login-page .welcome-card h5 {
+  color: var(--gris-itp);
+  margin: 25px 0 20px;
+  font-weight: 600;
+}
+
+/* Línea divisoria */
+.login-page hr {
+  margin: 30px 0;
+  opacity: 0.12;
+}
+
+/* Inputs */
+.login-page .form-control {
+  border-radius: 12px;
+  padding: 13px;
+  border: 1px solid #d6dbe1;
+  transition: all 0.25s ease;
+}
+
+.login-page .form-control:focus {
+  border-color: var(--azul-itp);
+  box-shadow: 0 0 0 3px rgba(11, 42, 74, 0.12);
+}
+
+/* Input group */
+.login-page .input-group-text {
+  background-color: #f8f9fa;
+  border: 1px solid #d6dbe1;
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+}
+
+/* Botón principal */
+.login-page .btn-primary {
+  background: linear-gradient(135deg, #0b2a4a, #123e6b);
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.login-page .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(11, 42, 74, 0.25);
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .login-page .welcome-card {
+    padding: 35px 25px;
+  }
+}
