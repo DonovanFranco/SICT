@@ -1,0 +1,378 @@
+/* ==============================
+   ESTILOS GENERALES
+============================== */
+
+body{
+background:#f4f6f9;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+margin:0;
+}
+
+
+/* ==============================
+   NAVBAR SUPERIOR (CORRECCIÓN BG-DARK)
+============================== */
+
+/* Este selector es más específico que el de Bootstrap */
+nav.navbar.bg-dark {
+    background-color: #0b2a4a !important; /* Tu azul oscuro */
+    padding: 12px 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    color: #ffffff !important;
+}
+
+/* Texto de usuario y otros elementos */
+.navbar .text-light, 
+.navbar span, 
+.navbar div {
+    color: #ffffff !important;
+}
+
+/* Botón "Cerrar sesión" (estilo esquema blanco) */
+.navbar .btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    color: #ffffff !important;
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+/* ==============================
+   SIDEBAR
+============================== */
+
+.sidebar{
+
+background:#ffffff;
+border-right:1px solid #e0e0e0;
+min-height:100vh;
+padding-top:20px;
+
+}
+
+.sidebar h6{
+
+font-weight:600;
+font-size:12px;
+letter-spacing:1px;
+margin-bottom:10px;
+
+}
+
+.sidebar .nav-link{
+
+color:#444;
+font-size:15px;
+padding:10px 12px;
+border-radius:6px;
+margin-bottom:5px;
+transition:0.2s;
+
+}
+
+.sidebar .nav-link:hover{
+
+background:#f0f2f5;
+color:#000;
+
+}
+
+.sidebar .nav-link.active{
+
+background:#e9ecef;
+font-weight:600;
+
+}
+
+
+/* ==============================
+   CONTENIDO PRINCIPAL
+============================== */
+
+.main-content{
+
+padding:30px;
+
+}
+
+.content-title{
+
+font-size:20px;
+font-weight:600;
+margin-bottom:20px;
+
+}
+
+
+/* ==============================
+   CARDS
+============================== */
+
+.card{
+
+border:none;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(22, 40, 117, 0.921);
+
+}
+
+.card-header{
+
+background:white;
+border-bottom:1px solid #eee;
+font-weight:600;
+font-size:16px;
+
+}
+
+.card-body{
+
+padding:25px;
+
+}
+
+
+/* ==============================
+   CONTROLES DE TABLA
+============================== */
+
+.table-controls{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+
+}
+
+.table-controls select{
+
+width:auto;
+display:inline-block;
+
+}
+
+.table-controls input{
+
+max-width:250px;
+
+}
+
+
+/* ==============================
+   TABLA
+============================== */
+
+.table{
+
+background:white;
+margin-bottom:0;
+
+}
+
+.table thead th{
+
+font-size:14px;
+font-weight:600;
+border-bottom:2px solid #dee2e6;
+
+}
+
+.table tbody td{
+
+vertical-align:middle;
+font-size:14px;
+
+}
+
+.table-hover tbody tr:hover{
+
+background:#f8f9fa;
+
+}
+
+
+/* ==============================
+   BOTONES DE ACCIONES
+============================== */
+
+.btn-action{
+
+width:34px;
+height:34px;
+padding:0;
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+margin-right:5px;
+
+border-radius:6px;
+
+}
+
+.btn-view{
+
+background:#0d6efd;
+color:white;
+
+}
+
+.btn-view:hover{
+
+background:#0b5ed7;
+
+}
+
+.btn-accept{
+
+background:#198754;
+color:white;
+
+}
+
+.btn-accept:hover{
+
+background:#157347;
+
+}
+
+.btn-reject{
+
+background:#dc3545;
+color:white;
+
+}
+
+.btn-reject:hover{
+
+background:#bb2d3b;
+
+}
+
+.btn-back{
+
+background:#6c757d;
+color:white;
+
+}
+
+.btn-back:hover{
+
+background:#5c636a;
+
+}
+
+
+/* ==============================
+   BUSCADOR
+============================== */
+
+.search-box{
+
+position:relative;
+
+}
+
+.search-box input{
+
+padding-left:10px;
+
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width:991px){
+
+.sidebar{
+
+display:none;
+
+}
+
+.main-content{
+
+padding:20px;
+
+}
+
+}
+
+
+@media (max-width:768px){
+
+.table-controls{
+
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+
+}
+
+}
+
+
+/* ==============================
+   SCROLL DE TABLA
+============================== */
+
+.table-responsive{
+
+border-radius:8px;
+overflow:hidden;
+
+}
+
+
+/* ==============================
+   MODALES
+============================== */
+
+.modal-header{
+
+border-bottom:1px solid #eee;
+
+}
+
+.modal-footer{
+
+border-top:1px solid #eee;
+
+}
+
+
+/* ==============================
+   ANIMACIONES SUAVES
+============================== */
+
+.card,
+.btn,
+.nav-link{
+
+transition:all .2s ease;
+
+}
+
+
+.cita-card{
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cita-card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    opacity: 0.9;
+}

@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <title>Elegir Fecha | SICT</title>
 
+  <link rel="icon" type="image/png" href="img/logo-sict.png">
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (Agregado para el ícono de usuario) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/estilos.css">
@@ -22,21 +26,26 @@
 
   <div class="row">
 
-    
-
     <!-- CALENDARIO -->
     <div class="col-md-6">
       <div class="card p-3 shadow-sm">
         <!-- IMAGEN -->
-      <center><img src="img/logo-fs.jpg" class="img-fluid mb-3" height="304" width="304" alt="Calendario"></center>
+        <center><img src="img/logo-fs.jpg" class="img-fluid mb-3" height="304" width="304" alt="Calendario"></center>
         <h5>Fechas disponibles</h5>
 
         <!-- INPUT FECHA (SOLO 2026) -->
         <input type="date"
-               id="fecha"
-               class="form-control"
-               min="2026-01-27"
-               max="2026-05-22">
+       id="fecha"
+       class="form-control mb-4">
+
+        <!-- HIPERVÍNCULO AGREGADO -->
+        <div class="text-center d-flex align-items-center justify-content-center gap-2">
+          <i class="bi bi-person-circle fs-5 text-secondary"></i>
+          <span>
+            ¿Ya te has registrado? 
+            <a href="ingreso-estudiante.html" class="text-decoration-none fw-semibold">Inicia sesión aquí</a>
+          </span>
+        </div>
       </div>
     </div>
 

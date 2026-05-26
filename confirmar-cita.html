@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Confirmar Cita</title>
+<link rel="icon" type="image/png" href="img/logo-sict.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="container mt-5">
+
+<h4 class="mb-3">Confirmar cita</h4>
+
+<p id="info"></p>
+
+<button class="btn btn-success" onclick="confirmar()">Confirmar</button>
+<button class="btn btn-secondary" onclick="cancelar()">Cancelar</button>
+
+<script>
+const fecha = localStorage.getItem("fechaCita");
+const hora = localStorage.getItem("horaCita");
+
+document.getElementById("info").textContent =
+    `Fecha: ${fecha} | Hora: ${hora}`;
+
+async function confirmar(){
+
+    const no_control = localStorage.getItem("alumno");
+
+    const res = await fetch("php/reagendar_cita.php",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({no_control, fecha, hora})
+    });
+
+    const r = await res.json();
+
+    if(r.ok){
+        Swal.fire({
+            icon:'success',
+            title:'Cita actualizada',
+            timer:1500,
+            showConfirmButton:false
+        }).then(()=>{
+            localStorage.removeItem("modoCita");
+            window.location.href = "egresado-panel.html";
+        });
+    }else{
+        Swal.fire('Error','No se pudo reagendar','error');
+    }
+}
+
+function cancelar(){
+    window.history.back();
+}
+</script>
+
+</body>
+</html>

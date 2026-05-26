@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Panel Egresado | SICT</title>
+
+<link rel="icon" type="image/png" href="img/logo-sict.png">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+
+<a class="navbar-brand" href="#">
+SICT | Tecnológico Nacional de México
+</a>
+
+<div class="ms-auto">
+<span class="text-white me-3" id="nombreUsuario">Alumno</span>
+
+<button class="btn btn-outline-light btn-sm" onclick="cerrarSesion()">
+Cerrar sesión
+</button>
+</div>
+
+</div>
+</nav>
+
+<div class="container-fluid">
+<div class="row">
+
+<!-- SIDEBAR -->
+<div class="col-md-2 bg-light sidebar min-vh-100 p-3">
+
+<h6 class="text-muted">MENÚ</h6>
+
+<ul class="nav flex-column">
+
+<li class="nav-item">
+<a class="nav-link active" href="#" onclick="mostrarVista('datos')">
+Datos Personales
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#" onclick="mostrarVista('citas')">
+Citas Agendadas
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#" onclick="mostrarVista('carpeta')">
+Generar Carpeta
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<!-- CONTENIDO -->
+<div class="col-md-10 p-4">
+
+<div class="card shadow-sm">
+<div class="card-body">
+
+<div id="vistaDatos"></div>
+<div id="vistaCitas" style="display:none;"></div>
+<div id="vistaCarpeta" style="display:none;"></div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="js/egresado-panel.js"></script>
+
+</body>
+</html>
